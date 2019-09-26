@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Seguros de Automóveis</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+     body
+     {
+      margin:10 auto;
+      padding:10;
+      background-color:#f1f1f1;
+     }
+     .box
+     {
+      width:100%;
+      padding:20px;
+      background-color:#fff;
+      border:1px solid #ccc;
+      border-radius:5px;
+      margin-top:25px;
+      text-align: center;
+     }
+    </style>
+</head>
+<body>
+    <div style="width:100%; max-width:720px; padding:5px; margin: 0 auto;">
+
+        <h1 class="box">Seguros de Automóveis</h1>
+        <p class="text-right">Baixar os fontes: <a href="segauto.zip">segauto.zip</a></p>
+        
+        <hr/>
+
+        <div id="panQuery">
+            <h2 class="box">Apólices - Listagem</h2>
+            Buscar por: <input type="search" id="formSearch" />
+            <button class="btn btn-sm " id="btnFormSearchApolice">Apólice</button>
+            <button class="btn btn-sm" id="btnFormSearchDoc">Documento</button>
+
+            <button id="btnNew" class="btn btn-sm btn-primary pull-right">Novo</button>
+
+            <div class='text-center' id="divQueryMensagem"></div>
+            <div id="panQueryView">
+                <table width=100% border=1 border=0>
+                    <thead>
+                        <tr style="color: #fff; background-color: darkcyan">
+                            <th>
+                                &nbsp;ID
+                            </th>
+                            <th>
+                                &nbsp;Apólice
+                            </th>
+                            <th>
+                                &nbsp;CPF/CNPJ
+                            </th>
+                            <th>
+                                &nbsp;Veículo
+                            </th>
+                            <th>
+                                &nbsp;Prêmio
+                            </th>
+                            <th style="width: 50px;">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div id="panNew">
+            <h2 class="box">Apólices - Novo</h2>
+
+            <form id="formNew">
+                <div class="form-group">
+                Número da apólice: <input type="text" name="formApoliceNew" id="formApoliceNew"> 
+                </div>
+                <div class="form-group">
+                    CPF/CNPJ do segurado: <input type="number" name="formDocNew" id="formDocNew">
+                </div>
+                <div class="form-group">
+                    Placa do veículo: <input type="text" name="formPlacaNew" id="formPlacaNew">
+                </div>
+                <div class="form-group">
+                    Valor Prêmio: <input type="number" name="formPremioNew" id="formPremioNew" step="any">
+                </div>
+
+            </form>
+
+            <div>
+                <button class="btn btn-sm btn-primary" id="btnFormSaveNew">Salvar</button>
+                <button class="btn btn-sm btn-danger btnFormCancelar">Cancelar</button>
+            </div>
+        </div>
+
+
+        <div id="panEdit">
+            <h2 class="box">Apólices - Edita</h2>
+
+            <form id="formEdit">
+                <input type="hidden" value="" name="formIdEdit" id="formIdEdit">
+                <div class="form-group">
+                    Número da apólice: <input type="number" name="formApoliceEdit" id="formApoliceEdit" readOnly="readonly"> 
+                </div>
+                <div class="form-group">
+                    CPF/CNPJ do segurado: <input type="number" name="formDocEdit" id="formDocEdit">
+                </div>
+                <div class="form-group">
+                    Placa do veículo: <input type="text" name="formPlacaEdit" id="formPlacaEdit">
+                </div>
+                <div class="form-group">
+                    Valor Prêmio: <input type="number" name="formPremioEdit" id="formPremioEdit" step="any">
+                </div>
+
+            </form>
+
+            <div>
+                <button class="btn btn-sm btn-primary" id="btnFormSaveEdit">Salvar</button>
+                <button class="btn btn-sm btn-danger btnFormCancelar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/base.js"></script>
+</body>
+</html>
